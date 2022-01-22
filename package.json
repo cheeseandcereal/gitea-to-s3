@@ -1,0 +1,83 @@
+{
+  "name": "gitea-to-s3",
+  "version": "1.0.0",
+  "description": "Native AWS stack to expose an api for copying code from gitea webhooks to s3 for use in ci/cd",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheeseandcereal/gitea-to-s3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cheeseandcereal/gitea-to-s3/issues"
+  },
+  "keywords": [
+    "webhook",
+    "api",
+    "aws",
+    "gitea"
+  ],
+  "author": "Adam Crowder",
+  "license": "Unlicense",
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 180
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/camelcase": "off",
+      "require-atomic-updates": "off",
+      "max-len": "off"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "lint": "eslint --ext .ts --format unix bin/ lib/ && prettier --check bin lib '{bin,lib}/*.ts'",
+    "format": "prettier --write '{bin,lib}/*.ts'",
+    "clean": "rm -rf bin/*.js lib/*.js bin/*.d.ts lib/*.d.ts cdk.out"
+  },
+  "devDependencies": {
+    "@types/archiver": "^5.3.1",
+    "@types/aws-lambda": "^8.10.91",
+    "@types/node": "17.0.10",
+    "@types/unzipper": "^0.10.5",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "aws-cdk": "2.8.0",
+    "esbuild": "^0.14.13",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "archiver": "^5.3.0",
+    "aws-cdk-lib": "2.8.0",
+    "aws-sdk": "^2.1062.0",
+    "constructs": "^10.0.41",
+    "got": "^11.8.3",
+    "source-map-support": "^0.5.21",
+    "unzipper": "^0.10.11"
+  }
+}
