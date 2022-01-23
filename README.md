@@ -98,6 +98,9 @@ If you go to the cloudwatch console and select log groups, the correct one shoul
 
 You can view the logstreams in this log group to diagnose issues. Each time a webhook is received from gitea, this lambda is invoked and will log to this log group.
 
+If you do not find any logs, you can check if the webhooks are being sent successfully, by going to the settings->webhooks page on
+a repository, clickind the edit pencil next to the webhook, then scrolling down and checking the provided information about previous webhook requests.
+
 ## Useful Information
 
 This project uses [AWS CDK](https://aws.amazon.com/cdk/) to define, configure, and create the native aws application.
