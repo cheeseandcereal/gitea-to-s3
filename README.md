@@ -42,7 +42,7 @@ Determine this url and save it for the next step
 
 The aws application stack can now be deployed
 
-Run this command, replacing the valuse for `giteaApiUrl` and `giteaApiToken` as appropriate
+Run this command, replacing the values for `giteaApiUrl` and `giteaApiToken` as appropriate
 with values from the previous Gitea Setup steps.
 
 `cdk --context giteaApiUrl=https://my.gitea.com/api/v1 --context giteaApiToken=abc123 deploy`
