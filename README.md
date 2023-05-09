@@ -17,8 +17,7 @@ with your desired aws account.
 
 1. Download the code repository: `git clone https://github.com/cheeseandcereal/gitea-to-s3.git && cd gitea-to-s3`
 1. Install the dependencies: `npm install`
-1. Ensure that you have cdk installed globally: `npm install -g aws-cdk`
-1. Ensure that you have the latest CDK bootstrap setup: `cdk bootstrap`
+1. Ensure that you have the latest CDK bootstrap setup: `npm run cdk bootstrap`
 
 ### Gitea Setup
 
@@ -45,7 +44,7 @@ The aws application stack can now be deployed
 Run this command, replacing the values for `giteaApiUrl` and `giteaApiToken` as appropriate
 with values from the previous Gitea Setup steps.
 
-`cdk --context giteaApiUrl=https://my.gitea.com/api/v1 --context giteaApiToken=abc123 deploy`
+`npm run cdk -- deploy --context giteaApiUrl=https://my.gitea.com/api/v1 --context giteaApiToken=abc123`
 
 After this command runs, it will print out 2 outputs: one for the name of the s3 bucket, and another for the endpoint URL,
 make sure to save these.

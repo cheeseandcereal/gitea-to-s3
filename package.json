@@ -57,26 +57,27 @@
     "clean": "rm -rf bin/*.js lib/*.js bin/*.d.ts lib/*.d.ts cdk.out"
   },
   "devDependencies": {
-    "@types/archiver": "^5.3.1",
-    "@types/aws-lambda": "^8.10.109",
-    "@types/node": "16.18.10",
-    "@types/unzipper": "^0.10.5",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
-    "aws-cdk": "2.55.1",
-    "esbuild": "^0.16.9",
-    "eslint": "^8.30.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.8.1",
+    "@types/archiver": "^5.3.2",
+    "@types/aws-lambda": "^8.10.115",
+    "@types/node": "18.16.6",
+    "@types/unzipper": "^0.10.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "aws-cdk": "^2.78.0",
+    "esbuild": "^0.17.18",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "archiver": "^5.3.1",
-    "aws-cdk-lib": "2.55.1",
-    "aws-sdk": "2.1083.0",
-    "constructs": "^10.1.194",
-    "got": "^11.8.5",
+    "aws-cdk-lib": "^2.78.0",
+    "@aws-sdk/client-s3": "^3.329.0",
+    "@aws-sdk/lib-storage": "^3.329.0",
+    "constructs": "^10.2.17",
+    "got": "^11.8.6",
     "source-map-support": "^0.5.21",
     "unzipper": "^0.10.11"
   }

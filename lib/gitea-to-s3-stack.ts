@@ -25,7 +25,7 @@ export class GiteaToS3Stack extends Stack {
       memorySize: 1024,
       timeout: Duration.seconds(29),
       entry: `${__dirname}/lambda-handler.ts`,
-      runtime: Runtime.NODEJS_16_X,
+      runtime: Runtime.NODEJS_18_X,
       environment: {
         GITEA_API_URL: giteaApiUrl,
         GITEA_API_TOKEN: giteaApiToken,
@@ -33,7 +33,7 @@ export class GiteaToS3Stack extends Stack {
       },
       bundling: {
         sourceMap: true,
-        target: 'es2018',
+        target: 'es2021',
       },
     });
     bucket.grantReadWrite(handler);
